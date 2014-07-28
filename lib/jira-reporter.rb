@@ -8,7 +8,6 @@ require 'jira-reporter/error'
 require 'jira-reporter/response'
 require 'jira-reporter/issue'
 require 'jira-reporter/rest_service'
-require 'jira-reporter/service'
 
 module JiraReporter
   # Your code goes here...
