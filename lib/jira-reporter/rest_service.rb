@@ -23,7 +23,7 @@ module JiraReporter
         self.get(parse_query("/project/#{project}"),
                  configure_options)
       ) do |response|
-        return {key: response["key"], lead: response["lead"]["name"], url: response["url"]}
+        return {key: response["key"], lead: response["lead"]["name"], url: "#{hash['self'].split('rest')[0]}browse/#{key}"}
       end
     end
 
