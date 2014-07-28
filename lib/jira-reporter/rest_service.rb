@@ -18,6 +18,15 @@ module JiraReporter
       end
     end
 
+    def self.get_project_details(project)
+      resp = JiraReporter::Response.new(
+        self.get(parse_query("/project/#{project}"),
+                 configure_options)
+      ) do |response|
+        return {key: response["key"], lead: response["lead"]["name"], url: response["url"]}
+      end
+    end
+
     def self.configure_options(options={})
       raise "No configuration file found, please create a jira.yml in the config directory" unless File.exists?('config/jira.yml')
       @config =  YAML.load_file('config/jira.yml')
