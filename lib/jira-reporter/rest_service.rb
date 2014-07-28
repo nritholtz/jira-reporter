@@ -19,7 +19,7 @@ module JiraReporter
     end
 
     def self.configure_options(options={})
-      raise "No configuration file found, please create a jira.yml in the root directory" unless File.exists?('config/jira.yml')
+      raise "No configuration file found, please create a jira.yml in the config directory" unless File.exists?('config/jira.yml')
       @config =  YAML.load_file('config/jira.yml')
       options[:basic_auth] = {username:@config['username'], password:@config['password']}
       options[:base_uri] = @config['base_uri']+"rest/api/#{API_VERSION}"
