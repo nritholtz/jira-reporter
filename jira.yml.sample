@@ -1,0 +1,5 @@
+base_uri: "https://jira.net/" 
+username: "username"
+password: "password"
+timeout: 20
+projects: ["TEST", "CNG", "Big Jira Portal"]
