@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths =  ['lib']
 
   s.add_runtime_dependency 'httparty', '~> 0.13.0'
-  s.add_runtime_dependency 'activesupport', '~> 3.1'
-  s.add_runtime_dependency 'activemodel', '~> 3.1'
-  s.add_runtime_dependency 'actionpack', '~> 3.1'
+  s.add_runtime_dependency 'activesupport', '>= 3.1'
+  s.add_runtime_dependency 'activemodel', '>= 3.1'
+  s.add_runtime_dependency 'actionpack', '>= 3.1'
 end
