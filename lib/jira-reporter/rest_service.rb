@@ -13,7 +13,7 @@ module JiraReporter
         self.get(parse_query("/search?jql=fixVersion+>+latestReleasedVersion(#{project})and+project=\"#{project}\"+and+resolution=Unresolved"),
                  configure_options)
       ) do |response|
-        return response["issues"].each_with_object([]){|issue, arr| arr << JiraReporter::Issue.new(issue)}
+        return response["issues"]
       end
     end
 
